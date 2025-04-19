@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Уроки и курсы</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">Программирование для начинающих</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="introduction.html">Введение</a></li>
+                <li><a href="languages.html">Языки</a></li>
+                <li class="active"><a href="lessons.html">Уроки</a></li>
+                <li><a href="resources.html">Ресурсы</a></li>
+                <li><a href="career.html">Карьера</a></li>
+                <li><a href="blog.html">Блог</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="lessons-header">
+            <h1>Уроки и курсы</h1>
+            <p>Здесь вы найдете бесплатные онлайн-курсы, видеоуроки и практические задания, которые помогут вам освоить программирование. Начните с основ и постепенно переходите к более сложным темам. Практика — ключ к успеху!</p>
+        </section>
+        <section class="courses">
+            <h2>Бесплатные онлайн-курсы</h2>
+            <ul>
+                <li><a href="https://www.codecademy.com/">Codecademy</a> - Интерактивные уроки по различным языкам программирования. Идеально для начинающих.</li>
+                <li><a href="https://www.freecodecamp.org/">freeCodeCamp</a> - Бесплатное обучение кодингу с практическими проектами. Подходит для тех, кто хочет получить сертификат.</li>
+                <li><a href="https://www.coursera.org/">Coursera</a> - Курсы от ведущих университетов. Многие курсы бесплатны, а за сертификат можно заплатить.</li>
+            </ul>
+        </section>
+        <section class="videos">
+            <h2>Видеоуроки</h2>
+            <ul>
+                <li><a href="https://www.youtube.com/user/thenewboston">thenewboston</a> - Популярный канал с уроками по разным языкам и технологиям.</li>
+                <li><a href="https://www.youtube.com/c/Freecodecamp">freeCodeCamp.org</a> - Полные курсы на YouTube, от основ до продвинутых тем.</li>
+            </ul>
+        </section>
+        <section class="assignments">
+            <h2>Практические задания</h2>
+            <div class="assignment">
+                <h3>Задание 1: Привет, мир!</h3>
+                <p>Напишите программу, которая выводит "Привет, мир!" в консоль. Это классическое задание для начала знакомства с любым языком программирования.</p>
+                <button onclick="toggleSolution(this)">Показать решение</button>
+                <div class="solution" style="display: none;">
+                    <pre><code># Python
+print("Привет, мир!")</code></pre>
+                </div>
+            </div>
+            <div class="assignment">
+                <h3>Задание 2: Простой калькулятор</h3>
+                <p>Создайте программу, которая принимает два числа и выводит их сумму. Это задание поможет вам понять, как работать с вводом данных и базовыми операциями.</p>
+                <button onclick="toggleSolution(this)">Показать решение</button>
+                <div class="solution" style="display: none;">
+                    <pre><code># Python
+num1 = float(input("Введите первое число: "))
+num2 = float(input("Введите второе число: "))
+print("Сумма:", num1 + num2)</code></pre>
+                </div>
+            </div>
+            <div class="assignment">
+                <h3>Задание 3: Проверка на четность</h3>
+                <p>Напишите программу, которая проверяет, является ли введенное число четным или нечетным. Это задание познакомит вас с условными операторами.</p>
+                <button onclick="toggleSolution(this)">Показать решение</button>
+                <div class="solution" style="display: none;">
+                    <pre><code># Python
+num = int(input("Введите число: "))
+if num % 2 == 0:
+    print("Четное")
+else:
+    print("Нечетное")</code></pre>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Программирование для начинающих. Все права защищены.</p>
+    </footer>
+    <script>
+        function toggleSolution(button) {
+            var solution = button.nextElementSibling;
+            if (solution.style.display === "none") {
+                solution.style.display = "block";
+                button.textContent = "Скрыть решение";
+            } else {
+                solution.style.display = "none";
+                button.textContent = "Показать решение";
+            }
+        }
+    </script>
+</body>
+</html>
